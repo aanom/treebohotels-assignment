@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "id": "2782eb25-bc02-47de-b2bc-e1b3f4816434",
+      "type": "text",
+      "title": "What is your name?",
+      "nesting": null
+    },
+    {
+      "id": "2ecdd3e9-8593-434d-a8cb-9fbdc003a88f",
+      "type": "number",
+      "title": "What is your age?",
+      "nesting": [
+        {
+          "rule": {
+            "id": "83cd2abb-9a6f-41ca-a04f-64e586457693",
+            "conditions": [
+              {
+                "operator": "GTE",
+                "right_operand": "18"
+              }
+            ]
+          },
+          "question": {
+            "id": "2c85e777-259c-4c60-8b51-a3c9feb4950b",
+            "type": "text",
+            "title": "What is your PAN no.?",
+            "nesting": null
+          }
+        },
+        {
+          "rule": {
+            "id": "ba939347-0aa6-4f31-b8c0-51a70edfa0f5",
+            "conditions": [
+              {
+                "operator": "LT",
+                "right_operand": "18"
+              }
+            ]
+          },
+          "question": {
+            "id": "bffa6246-9cd8-432d-a3a7-3050bc29c40e",
+            "type": "text",
+            "title": "What is your Aadhar no.?",
+            "nesting": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "0d9f666e-89e8-49f8-b9f9-ef7d833028ad",
+      "type": "mcq",
+      "title": "Which is your favorite ice cream flavor?",
+      "nesting": [
+        {
+          "rule": {
+            "id": "a57a9436-cd5e-4268-967b-fec5c11c3c35",
+            "conditions": [
+              {
+                "operator": "EQ",
+                "right_operand": "Chocolate"
+              }
+            ]
+          },
+          "question": {
+            "id": "fb8bac7e-7736-4b53-94e3-592a0347cf4f",
+            "type": "number",
+            "title": "What is 12 + 15?",
+            "nesting": null
+          }
+        },
+        {
+          "rule": {
+            "id": "8d1927cb-4f1f-4b07-81e4-5c7e9fbab632",
+            "conditions": [
+              {
+                "operator": "EQ",
+                "right_operand": "Strawberry"
+              }
+            ]
+          },
+          "question": {
+            "id": "eda3dd2a-dbb8-4ec0-9fd2-f7a7a30ef995",
+            "type": "number",
+            "title": "What is 335 - 17?",
+            "nesting": null
+          }
+        }
+      ],
+      "options": [
+        {
+          "id": "e7e39ed5-b5a7-4da1-ac88-8a59e13116e8",
+          "label": "Chocolate",
+          "value": "Chocolate"
+        },
+        {
+          "id": "1fb08f31-7193-4b15-8626-dfd5bb704489",
+          "label": "Strawberry",
+          "value": "Strawberry"
+        }
+      ]
+    }
+  ]
+}
